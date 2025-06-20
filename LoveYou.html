@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./static/index.css">
+    <link rel="stylesheet" href="./static/clock.css">
+    <link rel="stylesheet" href="./static/RuiZiYunZiKuXingKaiGB-2-embed.css">
+    <title>宇霖💕思瑶</title>
+    <style>
+        /* 新增布局样式 */
+        .time-rows {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .date-row,
+        .time-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .separator-row {
+            height: 20px;
+            text-align: center;
+            color: #ff7b89;
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        @font-face {
+            font-family: 'ZiYanFont';
+            src: url('./resources/ZiYanShiLuoHuaLiuShui-2.ttf') format('truetype');
+        }
+
+        .xr_r {
+            margin-bottom: 20px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <div style="display: flex; gap: 55%; align-items: center;">
+            <div class="xr_r">
+                <img class="xr_rotate" id="images" draggable="false" src="http://q.qlogo.cn/headimg_dl?dst_uin=2545310850&spec=640" alt="">
+                <p class="the-p p-three" style="font-family: 'ZiYanFont', cursive;">宇霖</p>
+            </div>
+            <div class="xr_r">
+                <img class="xr_rotate" id="images" draggable="false" src="http://q.qlogo.cn/headimg_dl?dst_uin=2715348472&spec=640" alt="">
+                <p class="the-p p-three" style="font-family: 'ZiYanFont', cursive;">思瑶</p>
+            </div>
+        </div>
+
+        <p class="the-p p-two">纵使万劫不复，纵使相思入骨</p>
+        <p class="the-p p-three">我也待你岁月如故，眉眼如初</p>
+
+        <!-- 修改后的时钟结构 -->
+        <div class="clock" id="clock" style="font-family: ZiYanFont', cursive;">
+            <div style="box-shadow:inset -7px -7px 12px rgba(0, 0, 0, .4),inset 7px 7px 12px rgba(0, 0, 0, .4);display:inline-block;border-radius: 25px;padding: 30px;">
+                <p class="the-p p-three" style="font-family: 'ZiYanFont', cursive;">宝宝❤️我们已经在一起：</p>
+                <div class="time-rows">
+                    <div class="date-row">
+                        <!-- 年 -->
+                        <div class="time-group">
+                            <div class="flip">
+                                <div class="digital front number0"></div>
+                                <div class="digital back number1"></div>
+                            </div>
+                            <div class="flip">
+                                <div class="digital front number0"></div>
+                                <div class="digital back number1"></div>
+                            </div>
+                        </div>
+                        <em class="separator">年</em>
+
+                        <!-- 月 -->
+                        <div class="time-group">
+                            <div class="flip">
+                                <div class="digital front number0"></div>
+                                <div class="digital back number1"></div>
+                            </div>
+                            <div class="flip">
+                                <div class="digital front number0"></div>
+                                <div class="digital back number1"></div>
+                            </div>
+                        </div>
+                        <em class="separator">月</em>
+
+                        <!-- 日 -->
+                        <div class="time-group">
+                            <div class="flip">
+                                <div class="digital front number0"></div>
+                                <div class="digital back number1"></div>
+                            </div>
+                            <div class="flip">
+                                <div class="digital front number0"></div>
+                                <div class="digital back number1"></div>
+                            </div>
+                        </div>
+                        <em class="separator">日</em>
+                    </div>
+
+                    <div class="separator-row">❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️</div>
+
+                    <div class="time-row">
+                        <!-- 时 -->
+                        <div class="time-group">
+                            <div class="flip">
+                                <div class="digital front number0"></div>
+                                <div class="digital back number1"></div>
+                            </div>
+                            <div class="flip">
+                                <div class="digital front number0"></div>
+                                <div class="digital back number1"></div>
+                            </div>
+                        </div>
+                        <em class="separator">时</em>
+
+                        <!-- 分 -->
+                        <div class="time-group">
+                            <div class="flip">
+                                <div class="digital front number0"></div>
+                                <div class="digital back number1"></div>
+                            </div>
+                            <div class="flip">
+                                <div class="digital front number0"></div>
+                                <div class="digital back number1"></div>
+                            </div>
+                        </div>
+                        <em class="separator">分</em>
+
+                        <!-- 秒 -->
+                        <div class="time-group">
+                            <div class="flip">
+                                <div class="digital front number0"></div>
+                                <div class="digital back number1"></div>
+                            </div>
+                            <div class="flip">
+                                <div class="digital front number0"></div>
+                                <div class="digital back number1"></div>
+                            </div>
+                        </div>
+                        <em class="separator">秒</em>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <iframe id="bg-iframe" style="z-index:-10;position: fixed;width:100%;height:100%;pointer-events: none;" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" src="./static/bg.html"></iframe>
+
+    <script src="./static/moment.js"></script>
+    <script>
+        // 保持Flipper类不变
+        function Flipper(config) {
+            this.config = {
+                node: null,
+                frontText: 'number0',
+                backText: 'number1',
+                duration: 600
+            }
+            Object.assign(this.config, config)
+            this.nodeClass = {
+                flip: 'flip',
+                front: 'digital front',
+                back: 'digital back'
+            }
+            this.frontNode = this.config.node.querySelector('.front')
+            this.backNode = this.config.node.querySelector('.back')
+            this.isFlipping = false
+            this._init()
+        }
+
+        Flipper.prototype = {
+            constructor: Flipper,
+            _init: function() {
+                this._setFront(this.config.frontText)
+                this._setBack(this.config.backText)
+            },
+            _setFront: function(className) {
+                this.frontNode.setAttribute('class', `${this.nodeClass.front} ${className}`)
+            },
+            _setBack: function(className) {
+                this.backNode.setAttribute('class', `${this.nodeClass.back} ${className}`)
+            },
+            _flip: function(type, front, back) {
+                if (this.isFlipping) return
+                this.isFlipping = true
+                this._setFront(front)
+                this._setBack(back)
+                const flipClass = `${this.nodeClass.flip} ${type} go`
+                this.config.node.setAttribute('class', flipClass)
+                setTimeout(() => {
+                    this.config.node.setAttribute('class', flipClass.replace(' go', ''))
+                    this.isFlipping = false
+                    this._setFront(back)
+                }, this.config.duration)
+            },
+            flipDown: function(front, back) {
+                this._flip('down', front, back)
+            },
+            flipUp: function(front, back) {
+                this._flip('up', front, back)
+            }
+        }
+
+        // 精确时间差计算函数
+        function calculateDuration(startDate, endDate) {
+            const start = moment(startDate);
+            const end = moment(endDate);
+
+            const years = end.diff(start, 'year');
+            start.add(years, 'years');
+
+            const months = end.diff(start, 'months');
+            start.add(months, 'months');
+
+            const days = end.diff(start, 'days');
+            start.add(days, 'days');
+
+            const hours = end.diff(start, 'hours');
+            start.add(hours, 'hours');
+
+            const minutes = end.diff(start, 'minutes');
+            start.add(minutes, 'minutes');
+
+            const seconds = end.diff(start, 'seconds');
+
+            return {
+                years,
+                months,
+                days,
+                hours,
+                minutes,
+                seconds
+            };
+        }
+
+        // 初始化逻辑
+        const START_TIME = moment('2025-04-05 13:58:05');
+        const flipNodes = document.querySelectorAll('.flip');
+        const flippers = [];
+
+        // 初始化12个翻牌实例
+        flipNodes.forEach((node, index) => {
+            flippers.push(new Flipper({
+                node: node,
+                frontText: `number${index % 10}`,
+                backText: `number${(index % 10) + 1}`
+            }));
+        });
+
+        // 时间更新逻辑
+        function updateTimer() {
+            const duration = calculateDuration(START_TIME, moment());
+
+            // 格式化为12位数字字符串（年2+月2+日2+时2+分2+秒2）
+            const timeStr = [
+                duration.years.toString().padStart(2, '0'),
+                duration.months.toString().padStart(2, '0'),
+                duration.days.toString().padStart(2, '0'),
+                duration.hours.toString().padStart(2, '0'),
+                duration.minutes.toString().padStart(2, '0'),
+                duration.seconds.toString().padStart(2, '0')
+            ].join('');
+
+            // 更新每个翻牌
+            timeStr.split('').forEach((num, index) => {
+                const current = flippers[index].frontNode.className.match(/number(\d)/)[1];
+                if (num !== current) {
+                    if (parseInt(num) > parseInt(current)) {
+                        flippers[index].flipDown(`number${current}`, `number${num}`);
+                    } else {
+                        flippers[index].flipUp(`number${current}`, `number${num}`);
+                    }
+                }
+            });
+        }
+        flippers[0].flipUp('number0', 'number0');
+        // 启动计时器
+        setInterval(updateTimer, 1000);
+        updateTimer();
+    </script>
+</body>
+
+</html>
